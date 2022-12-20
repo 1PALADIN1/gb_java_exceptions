@@ -8,20 +8,18 @@ package lesson1;
 public class Task3 {
     public void run() {
         System.out.println("======== TASK3 ========");
+        int[] result = merge(new int[] { 1, 2, 3, 4}, new int[] { 4, 3, 2, 1});
+        System.out.print("Result: ");
+        for (int el : result) {
+            System.out.print(el + " ");
+        }
+        System.out.println();
 
         try {
-            int[] result = merge(new int[] { 1, 2, 3, 4}, new int[] { 4, 3, 2, 1});
-            System.out.print("Result: ");
-            for (int el : result) {
-                System.out.print(el + " ");
-            }
-            System.out.println();
-
             merge(new int[] { 1, 2, 3, 4}, new int[] { 4, 3 });
         } catch (RuntimeException e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     private int[] merge(int[] arrA, int[] arrB) {
