@@ -19,7 +19,10 @@ public class Main {
 //        lesson2.Task1 task1 = new lesson2.Task1();
 //        task1.run();
 
-        lesson2.Task2 task2 = new lesson2.Task2();
-        task2.run();
+//        lesson2.Task2 task2 = new lesson2.Task2();
+//        task2.run();
+
+        lesson2.Task3 task3 = new lesson2.Task3();
+        task3.run();
     }
 }
