@@ -16,7 +16,10 @@ public class Main {
     }
 
     private static void lesson2() {
-        lesson2.Task1 task1 = new lesson2.Task1();
-        task1.run();
+//        lesson2.Task1 task1 = new lesson2.Task1();
+//        task1.run();
+
+        lesson2.Task2 task2 = new lesson2.Task2();
+        task2.run();
     }
 }
