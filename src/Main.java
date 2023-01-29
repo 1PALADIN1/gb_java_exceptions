@@ -1,7 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 //        lesson1();
-        lesson2();
+//        lesson2();
+        lesson3();
     }
 
     private static void lesson1() {
@@ -27,5 +28,10 @@ public class Main {
 
         lesson2.Task4 task4 = new lesson2.Task4();
         task4.run();
+    }
+
+    private static void lesson3() {
+        lesson3.App app = new lesson3.App();
+        app.run();
     }
 }
