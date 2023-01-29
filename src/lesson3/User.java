@@ -22,6 +22,10 @@ public class User {
         this.sex = sex;
     }
 
+    public String getLastName() {
+        return lastName;
+    }
+
     @Override
     public String toString() {
         return "<" + lastName + "><" + firstName + "><" + patronymic + "><"

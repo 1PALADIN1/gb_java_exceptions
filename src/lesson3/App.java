@@ -1,5 +1,10 @@
 package lesson3;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -49,6 +54,8 @@ public class App {
                 break;
             } catch (ParseException e) {
                 System.out.println("Invalid input birthdate: " + e.getMessage());
+            } catch (IOException e) {
+                System.out.println("File write error: " + e);
             } catch (RuntimeException e) {
                 System.out.println(e.getMessage());
             }
@@ -130,7 +137,8 @@ public class App {
         return true;
     }
 
-    private void writeUserToFile(User user) {
-        // TODO: implement
+    private void writeUserToFile(User user) throws IOException {
+        Path filePath = Paths.get(user.getLastName());
+        Files.writeString(filePath, user + "\n", StandardOpenOption.APPEND, StandardOpenOption.CREATE);
     }
 }
